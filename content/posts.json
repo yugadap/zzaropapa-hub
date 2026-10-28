@@ -1,0 +1,13 @@
+[
+  {
+    "id": "post-20261028-naver",
+    "channel": "네이버 블로그",
+    "channelKey": "naver",
+    "title": "AI 3총사 파이프라인 실전 구축기 (클로드 + 앤티그래비티 + 어사이드)",
+    "url": "https://blog.naver.com/economytalktalk/224456327547",
+    "date": "2026-10-28",
+    "thumbnail": "assets/images/posts/post_01_naver.png",
+    "badge": "실전 구축기",
+    "summary": "밤마다 원고 쓰고 카드뉴스 만들던 삽질 끝! 3대 AI 협업으로 토큰 0원 파이프라인 완성한 현실 후기"
+  }
+]

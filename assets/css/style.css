@@ -1,0 +1,650 @@
+/* ==========================================================================
+   짜로파파의 AI 연구소 - 따뜻한 손그림 스타일 (Zzaropapa Hub Theme)
+   모바일 우선(Mobile-First) 반응형 디자인
+   ========================================================================== */
+
+:root {
+  --bg-cream: #FAF7F0;
+  --bg-card: #FFFFFF;
+  --bg-card-alt: #FFFDF9;
+  --text-main: #24292F;
+  --text-sub: #57606A;
+  --text-muted: #8C959F;
+  --border-line: #24292F;
+  --shadow-line: #24292F;
+  
+  /* 아기자기한 포인트 컬러 */
+  --point-yellow: #FFE382;
+  --point-pink: #FFB3BA;
+  --point-mint: #BAE1D3;
+  --point-peach: #FFDFBA;
+  
+  /* 채널별 컬러 */
+  --channel-naver: #03C75A;
+  --channel-tistory: #FF5A00;
+  --channel-insta: #E1306C;
+  --channel-threads: #101010;
+
+  --font-base: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --card-radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-main);
+  font-family: var(--font-base);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 24px 16px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.site-wrap {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ==========================================================================
+   1. 헤더 / 프로필 (Hero)
+   ========================================================================== */
+.hero-section {
+  text-align: center;
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-line);
+  border-radius: var(--card-radius);
+  padding: 32px 20px 24px;
+  box-shadow: 4px 4px 0px var(--shadow-line);
+  position: relative;
+}
+
+.hero-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  background: var(--point-yellow);
+  border: 2px solid var(--border-line);
+  padding: 3px 18px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--border-line);
+  letter-spacing: -0.3px;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+}
+
+.profile-avatar-wrap {
+  display: inline-block;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid var(--border-line);
+  background: #FFFDF5;
+  object-fit: cover;
+  display: block;
+  box-shadow: 3px 3px 0px var(--shadow-line);
+}
+
+.avatar-badge {
+  position: absolute;
+  bottom: 0px;
+  right: -6px;
+  background: #FFF;
+  border: 2px solid var(--border-line);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #24292F;
+}
+
+.hero-title-group h1 {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.hero-slogan {
+  display: inline-block;
+  background: var(--point-peach);
+  border: 1.5px solid var(--border-line);
+  border-radius: 8px;
+  padding: 3px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--border-line);
+  margin-bottom: 12px;
+}
+
+.hero-desc {
+  font-size: 14.5px;
+  color: var(--text-sub);
+  word-break: keep-all;
+  line-height: 1.55;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   2. 4채널 바로가기 버튼 (Channels)
+   ========================================================================== */
+.channels-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-label {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 4px;
+}
+
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.channel-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-line);
+  border-radius: 16px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--text-main);
+  box-shadow: 3px 3px 0px var(--shadow-line);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.channel-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--shadow-line);
+}
+
+.channel-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px var(--shadow-line);
+}
+
+.channel-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 2px solid var(--border-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.channel-btn.naver .channel-icon-box { background: #E8F8F0; color: var(--channel-naver); }
+.channel-btn.tistory .channel-icon-box { background: #FFF0E6; color: var(--channel-tistory); }
+.channel-btn.instagram .channel-icon-box { background: #FDEBF2; color: var(--channel-insta); }
+.channel-btn.threads .channel-icon-box { background: #EFEFEF; color: var(--channel-threads); }
+
+.channel-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.channel-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.channel-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   3. 무료 템플릿 카드 (Highlight Card)
+   ========================================================================== */
+.template-card {
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-line);
+  border-radius: var(--card-radius);
+  padding: 20px;
+  box-shadow: 4px 4px 0px var(--shadow-line);
+  position: relative;
+}
+
+.template-badge {
+  display: inline-block;
+  background: var(--point-yellow);
+  border: 2px solid var(--border-line);
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 2px 8px;
+  margin-bottom: 8px;
+}
+
+.template-card h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.template-desc {
+  font-size: 13.5px;
+  color: var(--text-sub);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.template-preview-box {
+  width: 100%;
+  height: 150px;
+  border: 2px solid var(--border-line);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #F4F0E8;
+}
+
+.template-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-template-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--point-yellow);
+  border: 2.5px solid var(--border-line);
+  border-radius: 14px;
+  padding: 13px 18px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--border-line);
+  box-shadow: 3px 3px 0px var(--shadow-line);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-template-cta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--shadow-line);
+  background: #FFDC66;
+}
+
+.btn-template-cta:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px var(--shadow-line);
+}
+
+/* ==========================================================================
+   4. 최근 발행 글 (Recent Posts)
+   ========================================================================== */
+.posts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.post-card {
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-line);
+  border-radius: 18px;
+  box-shadow: 4px 4px 0px var(--shadow-line);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+}
+
+.post-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--shadow-line);
+}
+
+.post-card-inner {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-thumb-wrap {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  background: #F0ECE1;
+  border-bottom: 2px solid var(--border-line);
+  overflow: hidden;
+}
+
+.post-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.post-channel-chip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #FFF;
+  border: 2px solid var(--border-line);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 11.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.chip-icon {
+  font-size: 12px;
+}
+
+.tag-naver { color: #029443; }
+.tag-tistory { color: #D64B00; }
+.tag-instagram { color: #B31B52; }
+.tag-threads { color: #111; }
+
+.post-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.post-badge {
+  background: var(--point-mint);
+  border: 1.5px solid var(--border-line);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--border-line);
+}
+
+.post-title {
+  font-size: 16.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--text-main);
+  word-break: keep-all;
+}
+
+.post-summary {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-link-label {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--border-line);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.post-link-label .arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   5. 알림 신청 폼 (Newsletter)
+   ========================================================================== */
+.newsletter-card {
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-line);
+  border-radius: var(--card-radius);
+  padding: 22px 20px;
+  box-shadow: 4px 4px 0px var(--shadow-line);
+  position: relative;
+}
+
+.newsletter-header {
+  margin-bottom: 14px;
+}
+
+.newsletter-header h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.newsletter-header p {
+  font-size: 13.5px;
+  color: var(--text-sub);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 13px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 2px solid var(--border-line);
+  border-radius: 12px;
+  background: #FFFDF9;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input-box:focus {
+  border-color: #0969DA;
+  background: #FFF;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 13px;
+  font-size: 14.5px;
+  font-weight: 800;
+  font-family: inherit;
+  border: 2.5px solid var(--border-line);
+  border-radius: 12px;
+  cursor: pointer;
+  background: var(--point-mint);
+  color: var(--border-line);
+  box-shadow: 3px 3px 0px var(--shadow-line);
+  transition: all 0.15s ease;
+}
+
+.btn-disabled {
+  background: #E5E5E5 !important;
+  color: #888 !important;
+  border-color: #AAA !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+}
+
+.status-msg {
+  display: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.status-msg.success {
+  background: #E8F8F0;
+  color: #029443;
+  border: 1.5px solid #029443;
+}
+
+.status-msg.error {
+  background: #FEECEB;
+  color: #CF222E;
+  border: 1.5px solid #CF222E;
+}
+
+.newsletter-notice {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   6. 푸터 (Footer)
+   ========================================================================== */
+.site-footer {
+  text-align: center;
+  padding: 16px 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text-sub);
+}
+
+.footer-quote {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--border-line);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-link {
+  color: var(--text-sub);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+  color: var(--text-main);
+}
+
+.copyright {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   반응형 최적화 (PC 폭 지원: 580px 이상)
+   ========================================================================== */
+@media (min-width: 600px) {
+  body {
+    padding: 36px 20px 60px;
+  }
+
+  .hero-section {
+    padding: 38px 28px 28px;
+  }
+
+  .hero-title-group h1 {
+    font-size: 26px;
+  }
+
+  .post-card-inner {
+    flex-direction: row;
+    height: 150px;
+  }
+
+  .post-thumb-wrap {
+    width: 170px;
+    height: 100%;
+    flex-shrink: 0;
+    border-bottom: none;
+    border-right: 2px solid var(--border-line);
+  }
+
+  .post-content {
+    padding: 14px 18px;
+    justify-content: center;
+  }
+
+  .post-title {
+    font-size: 16px;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+  }
+
+  .input-box {
+    flex: 1;
+  }
+
+  .btn-submit {
+    width: auto;
+    padding: 13px 22px;
+    white-space: nowrap;
+  }
+}
