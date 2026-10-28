@@ -11,7 +11,7 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const HOST = '127.0.0.1';
-const ROOT_DIR = __dirname;
+const ROOT_DIR = path.join(__dirname, '..');
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',

@@ -1,0 +1,3040 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>아기 키우는 부모를 위한 상황별 AI 프롬프트 TOP 50 | 짜로파파의 AI 연구소</title>
+  <meta name="description" content="초보 아빠가 매일 밤 직접 써보고 검증한 실전 육아 프롬프트 50선. 이유식, 수면, 건강 메모, 외출 준비, 발달 놀이, 기록, 부부 소통까지 1클릭 복사!" />
+  <meta name="keywords" content="육아 프롬프트, 챗GPT 육아, 제미나이 육아, 이유식 식단표, 아기 수면교육, 소아과 메모, 짜로파파" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="아기 키우는 부모를 위한 상황별 AI 프롬프트 TOP 50" />
+  <meta property="og:description" content="복사해서 바로 쓰는 실전 육아 프롬프트 50선. 이유식·수면·소아과 진료·외출 패킹 완벽 총정리" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../../assets/images/profile_01_baby.png" />
+  
+  <!-- Favicon & Base CSS -->
+  <link rel="icon" type="image/png" href="../../assets/images/profile_01_baby.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+
+  <style>
+    /* ==========================================================================
+       자료 페이지 전용 스타일 (손그림 브루탈리즘 + 모바일 최적화)
+       ========================================================================== */
+    .resource-wrap {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* 상단 배너 & 네비게이션 */
+    .top-nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+      border: 2px solid var(--border-line);
+      border-radius: 14px;
+      padding: 10px 16px;
+      box-shadow: 3px 3px 0px var(--shadow-line);
+    }
+    .top-nav-bar a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.15s ease;
+    }
+    .top-nav-bar a:hover {
+      transform: translateX(-2px);
+    }
+    .nav-badge {
+      background: var(--point-yellow);
+      border: 1.5px solid var(--border-line);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* 히어로 섹션 */
+    .resource-hero {
+      background: var(--bg-card);
+      border: 2.5px solid var(--border-line);
+      border-radius: var(--card-radius);
+      padding: 28px 20px 22px;
+      box-shadow: 4px 4px 0px var(--shadow-line);
+      text-align: center;
+      position: relative;
+    }
+    .hero-gift-tape {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-1deg);
+      background: var(--point-pink);
+      border: 2px solid var(--border-line);
+      padding: 4px 16px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--border-line);
+      box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+      white-space: nowrap;
+    }
+    .resource-hero h1 {
+      font-size: 23px;
+      line-height: 1.4;
+      font-weight: 900;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+      word-break: keep-all;
+    }
+    .resource-hero .hero-sub {
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 1.6;
+      word-break: keep-all;
+      margin-bottom: 18px;
+    }
+
+    /* 안전 주의 배너 */
+    .safety-alert-card {
+      background: #FFF9E6;
+      border: 2px dashed #D97706;
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: #92400E;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .safety-alert-card .alert-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      line-height: 1.2;
+    }
+    .safety-alert-card strong {
+      color: #78350F;
+    }
+
+    /* 검색 및 필터 컨트롤 */
+    .filter-section {
+      background: var(--bg-card);
+      border: 2px solid var(--border-line);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 3px 3px 0px var(--shadow-line);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: sticky;
+      top: 12px;
+      z-index: 50;
+    }
+    .search-input-wrap {
+      position: relative;
+      width: 100%;
+    }
+    .search-input {
+      width: 100%;
+      height: 44px;
+      padding: 8px 14px 8px 38px;
+      font-size: 14px;
+      border: 2px solid var(--border-line);
+      border-radius: 10px;
+      background: #FFFDF9;
+      outline: none;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+    .search-input:focus {
+      background: #FFFFFF;
+      border-color: #000;
+      box-shadow: 2px 2px 0px var(--shadow-line);
+    }
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      pointer-events: none;
+    }
+
+    /* 카테고리 가로 스크롤 탭 */
+    .category-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .category-tabs::-webkit-scrollbar {
+      display: none;
+    }
+    .tab-btn {
+      flex-shrink: 0;
+      border: 1.5px solid var(--border-line);
+      border-radius: 20px;
+      background: #FFFFFF;
+      padding: 6px 12px;
+      font-size: 12.5px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+      color: var(--text-main);
+    }
+    .tab-btn:hover {
+      background: var(--bg-cream);
+    }
+    .tab-btn.active {
+      background: var(--border-line);
+      color: #FFFFFF;
+      border-color: var(--border-line);
+      box-shadow: 2px 2px 0px rgba(0,0,0,0.25);
+    }
+    .tab-count {
+      background: rgba(0,0,0,0.08);
+      padding: 1px 6px;
+      border-radius: 10px;
+      font-size: 11px;
+    }
+    .tab-btn.active .tab-count {
+      background: rgba(255,255,255,0.25);
+      color: #FFF;
+    }
+
+    /* 프롬프트 카드 목록 */
+    .prompts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .prompt-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-line);
+      border-radius: 18px;
+      padding: 20px 18px 18px;
+      box-shadow: 3.5px 3.5px 0px var(--shadow-line);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.15s ease;
+      position: relative;
+    }
+    .prompt-card:hover {
+      transform: translateY(-2px);
+    }
+
+    /* 카드 헤더 */
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .badge-num {
+      background: var(--border-line);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .badge-cat {
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border-line);
+    }
+    .cat-meal { background: #FFE8D6; }
+    .cat-sleep { background: #D8E2DC; }
+    .cat-health { background: #FFCAD4; }
+    .cat-outing { background: #B5E2FA; }
+    .cat-play { background: #FDE2E4; }
+    .cat-record { background: #EDDCD2; }
+    .cat-communication { background: #E2ECE9; }
+
+    .badge-age {
+      font-size: 11.5px;
+      color: var(--text-sub);
+      font-weight: 600;
+    }
+
+    /* 복사 버튼 */
+    .btn-copy {
+      background: var(--point-yellow);
+      border: 1.5px solid var(--border-line);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 12.5px;
+      font-weight: 800;
+      font-family: inherit;
+      color: var(--border-line);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 2px 2px 0px var(--shadow-line);
+      transition: all 0.12s ease;
+      flex-shrink: 0;
+    }
+    .btn-copy:active {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0px var(--shadow-line);
+    }
+    .btn-copy.copied {
+      background: #10B981 !important;
+      color: #FFFFFF !important;
+      border-color: #047857 !important;
+    }
+
+    /* 카드 제목 */
+    .card-title {
+      font-size: 16.5px;
+      line-height: 1.45;
+      font-weight: 800;
+      color: var(--text-main);
+      word-break: keep-all;
+    }
+
+    /* 프롬프트 코드 영역 */
+    .prompt-box {
+      background: #FFFDF8;
+      border: 1.5px solid var(--border-line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .prompt-box-top {
+      background: #F3EED9;
+      border-bottom: 1.5px solid var(--border-line);
+      padding: 6px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+    }
+    .prompt-label {
+      font-weight: 800;
+      color: #374151;
+    }
+    .prompt-sub {
+      color: #6B7280;
+    }
+    .prompt-code {
+      margin: 0;
+      padding: 12px 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Nanum Gothic Coding", monospace;
+      font-size: 12.5px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-all;
+      color: #1F2937;
+      max-height: 220px;
+      overflow-y: auto;
+      background: #FFFFFF;
+    }
+
+    /* 하단 팁 & 근거 */
+    .card-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tip-box {
+      background: #F0FDF4;
+      border-left: 3px solid #22C55E;
+      border-radius: 0 8px 8px 0;
+      padding: 8px 12px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #166534;
+    }
+    .tip-icon {
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .tip-content strong {
+      color: #14532D;
+    }
+    .evidence-box {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: #6B7280;
+      padding-left: 2px;
+    }
+    .evidence-icon {
+      font-size: 12px;
+    }
+
+    /* 결과 없음 */
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--bg-card);
+      border: 2px dashed var(--border-line);
+      border-radius: 18px;
+      color: var(--text-sub);
+      display: none;
+    }
+    .no-results-icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    /* 토스트 알림 */
+    .toast-popup {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #111827;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 9999;
+      opacity: 0;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      pointer-events: none;
+    }
+    .toast-popup.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* 하단 푸터 / 채널 바로가기 */
+    .resource-footer {
+      background: var(--bg-card);
+      border: 2px solid var(--border-line);
+      border-radius: var(--card-radius);
+      padding: 24px 18px;
+      box-shadow: 3.5px 3.5px 0px var(--shadow-line);
+      text-align: center;
+      margin-top: 10px;
+    }
+    .footer-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--border-line);
+      margin-bottom: 8px;
+    }
+    .footer-title {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .footer-desc {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .footer-links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .footer-channel-btn {
+      border: 1.5px solid var(--border-line);
+      border-radius: 10px;
+      padding: 8px 10px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 12px;
+      font-weight: 700;
+      background: #FFFDF9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 1.5px 1.5px 0px var(--shadow-line);
+    }
+    .footer-channel-btn:hover {
+      background: var(--point-yellow);
+    }
+    .btn-back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--border-line);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 10px 20px;
+      border-radius: 24px;
+      box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 480px) {
+      .resource-hero h1 { font-size: 20px; }
+      .prompt-code { font-size: 11.5px; }
+      .btn-copy { padding: 5px 9px; font-size: 11.5px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="resource-wrap">
+
+    <!-- 상단 간이 네비게이션 -->
+    <nav class="top-nav-bar">
+      <a href="../../index.html">
+        <span>←</span>
+        <span>짜로파파 허브 홈</span>
+      </a>
+      <span class="nav-badge">🎁 배포 자료 #01</span>
+    </nav>
+
+    <!-- 1. 히어로 인트로 -->
+    <header class="resource-hero">
+      <div class="hero-gift-tape">댓글 나눔 자료 · 공식 배포판 🎁</div>
+      <h1>아기 키우는 부모를 위한<br />상황별 AI 프롬프트 TOP 50</h1>
+      <p class="hero-sub">
+        밤 10시 육퇴 후 초보 아빠가 매일 밤 직접 써보고 검증한 실전 육아 프롬프트 모음입니다.<br />
+        상황에 맞게 <strong>[복사하기]</strong>를 눌러 Gemini 무료 앱이나 ChatGPT에 그대로 붙여넣어 쓰세요!
+      </p>
+
+      <!-- 안전 가이드라인 알림 -->
+      <div class="safety-alert-card">
+        <span class="alert-icon">⚠️</span>
+        <div>
+          <strong>아빠의 필수 안전 수칙:</strong>
+          본 프롬프트는 의학적 진단/처방 목적이 아니며 소아 질병은 반드시 전문의와 상담하세요.
+          아기의 실명, 생년월일, 주민번호 등 민감한 개인정보는 절대 입력하지 마세요.
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. 실시간 검색 & 카테고리 탭 (Sticky) -->
+    <section class="filter-section">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="검색어 입력 (예: 이유식, 열날때, 깨시, 기저귀, 인스타 등)..." 
+          oninput="handleSearch()"
+        />
+      </div>
+
+      <div class="category-tabs" id="category-tabs">
+        
+    <button class="tab-btn active" data-cat="all" onclick="filterCategory('all')">
+      <span class="tab-icon">🌟</span>
+      <span class="tab-name">전체보기</span>
+      <span class="tab-count">50</span>
+    </button>
+  
+
+    <button class="tab-btn " data-cat="meal" onclick="filterCategory('meal')">
+      <span class="tab-icon">🥣</span>
+      <span class="tab-name">이유식·유아식</span>
+      <span class="tab-count">8</span>
+    </button>
+  
+
+    <button class="tab-btn " data-cat="sleep" onclick="filterCategory('sleep')">
+      <span class="tab-icon">🌙</span>
+      <span class="tab-name">수면·깨시</span>
+      <span class="tab-count">8</span>
+    </button>
+  
+
+    <button class="tab-btn " data-cat="health" onclick="filterCategory('health')">
+      <span class="tab-icon">🩺</span>
+      <span class="tab-name">건강·병원</span>
+      <span class="tab-count">8</span>
+    </button>
+  
+
+    <button class="tab-btn " data-cat="outing" onclick="filterCategory('outing')">
+      <span class="tab-icon">🎒</span>
+      <span class="tab-name">외출·패킹</span>
+      <span class="tab-count">7</span>
+    </button>
+  
+
+    <button class="tab-btn " data-cat="play" onclick="filterCategory('play')">
+      <span class="tab-icon">🧸</span>
+      <span class="tab-name">발달·놀이</span>
+      <span class="tab-count">7</span>
+    </button>
+  
+
+    <button class="tab-btn " data-cat="record" onclick="filterCategory('record')">
+      <span class="tab-icon">📷</span>
+      <span class="tab-name">성장·기록</span>
+      <span class="tab-count">6</span>
+    </button>
+  
+
+    <button class="tab-btn " data-cat="communication" onclick="filterCategory('communication')">
+      <span class="tab-icon">💬</span>
+      <span class="tab-name">부부·소통</span>
+      <span class="tab-count">6</span>
+    </button>
+  
+      </div>
+    </section>
+
+    <!-- 3. 프롬프트 카드 50선 목록 -->
+    <main class="prompts-list" id="prompts-container">
+      
+      <article class="prompt-card" data-category="meal" id="p-1">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#01</span>
+            <span class="badge-cat cat-meal">이유식·유아식</span>
+            <span class="badge-age">👶 생후 9~12개월 (후기)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(1)" id="copy-btn-1" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">후기 이유식 하루 3끼 겹치지 않는 일주일 식단표 & 마트 장보기</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-1">[우리 아기 정보]
+- 월령: 후기 이유식(생후 10개월)
+- 알레르기/피할 재료: 달걀 흰자 제외
+- 현재 먹는 횟수: 하루 3회 (진밥 형태)
+
+[요청 사항]
+1. 월요일부터 일요일까지 7일간 겹치지 않는 후기 이유식 3끼 식단표를 짜줘.
+2. 이번 주 마트에서 한 번에 살 수 있는 장보기 식재료 목록을 '채소/육류/곡류'로 분류해서 정리해줘.
+3. 큐브로 미리 소분해서 냉동할 수 있는 추천 재료 3가지도 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 월령과 피할 알레르기 재료를 첫 줄에 못 박고, 마트 동선에 맞게 채소/육류/곡류로 나눠달라고 하면 장보기가 절반으로 단축됩니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 보건복지부 9~11개월 하루 3회 균형 영양 권고 지침</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="meal" id="p-2">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#02</span>
+            <span class="badge-cat cat-meal">이유식·유아식</span>
+            <span class="badge-age">👶 생후 5~6개월 (초기)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(2)" id="copy-btn-2" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">초기 이유식 쌀미음 다음 재료 추가 3일 간격 스케줄러</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-2">[우리 아기 정보]
+- 현재 상태: 완분 아기, 생후 160일, 쌀미음 4일 차 이상 반응 없음
+- 목표: 초기 1단계 이유식 한 달 스케줄 짜기
+
+[요청 사항]
+1. 쌀미음 다음으로 시도할 안전한 채소(애호박, 청경채, 브로콜리 등) 순서를 3일 간격으로 배치해줘.
+2. 알레르기 반응(두드러기, 설사 등)을 관찰하기 가장 좋은 급여 시간대와 주의사항 2가지를 알려줘.
+3. 한 번에 먹일 권장 용량(ml)과 농도(농축도) 기준을 표로 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 새로운 식재료는 반드시 소아과 진료가 가능한 오전 10시경에 3일 간격으로 1가지씩만 추가하는 것이 안전합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한소아청소년과학회 초기 이유식 알레르기 감별 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="meal" id="p-3">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#03</span>
+            <span class="badge-cat cat-meal">이유식·유아식</span>
+            <span class="badge-age">👶 생후 6~12개월 (전체 이유식기)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(3)" id="copy-btn-3" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">이유식 큐브 대량 조리 조합표 & 냉동 보관 기한 계산기</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-3">[우리 집 냉장고 재료]
+- 보유 채소: 단호박 1통, 당근 1개, 애호박 1개, 표고버섯 3개
+- 육류: 소고기 우둔살 300g
+- 큐브 틀 규격: 15g 틀, 30g 틀 보유
+
+[요청 사항]
+1. 위 재료들을 찜기에 쪄서 큐브로 만들 때 가장 조리 시간을 아낄 수 있는 조리 순서 동선을 짜줘.
+2. 각 재료별 냉동 보관 권장 기한(최대 몇 주)과 해동 시 영양 손실을 줄이는 전자레인지/중탕 팁을 알려줘.
+3. 15g과 30g 틀에 각각 어떤 재료를 소분하는 게 후기 이유식 식단 조합에 편리한지 추천해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 채소류는 2~3주, 육류는 2주 이내 소비가 기본이며, 냉동 큐브 뚜껑에 만든 날짜를 마스킹 테이프로 적어두면 관리가 편합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 식품의약품안전처 영유아 조리식품 냉동 보관 및 위생 기준</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="meal" id="p-4">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#04</span>
+            <span class="badge-cat cat-meal">이유식·유아식</span>
+            <span class="badge-age">👶 생후 7~11개월 (중·후기)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(4)" id="copy-btn-4" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">숟가락 거부 & 입 꾹 닫는 아기를 위한 질감·온도 조절 단계별 대안</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-4">[아기 거부 증상]
+- 월령: 생후 9개월 (중기 후반)
+- 상태: 3일 전부터 첫 숟가락은 먹고 두 번째부터 고개를 돌리고 입을 꾹 닫음
+- 특이사항: 이앓이(앞니 아래 2개 나는 중), 치발기는 차갑게 주면 잘 씹음
+
+[요청 사항]
+1. 이앓이나 질감 거부일 가능성을 고려하여 이유식 온도(미온 vs 약간 시원함)와 입자 크기 조절법 3단계를 알려줘.
+2. 숟가락 자체에 대한 거부감을 줄일 수 있는 촉감 놀이 형태의 핑거푸드 대체 레시피 2가지를 제안해줘.
+3. 억지로 먹이지 않고 부모가 식사 시간에 지켜야 할 스트레스 없는 3대 태도 원칙을 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 이앓이 시기에는 미지근한 죽보다 살짝 식힌 퓨레나 손으로 쥐어 먹는 오이 스틱이 잇몸 진정에 훨씬 효과적입니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 육아정책연구소(KICCE) 영아 식습관 거부 대처 권고</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="meal" id="p-5">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#05</span>
+            <span class="badge-cat cat-meal">이유식·유아식</span>
+            <span class="badge-age">👶 생후 6~12개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(5)" id="copy-btn-5" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">생후 6개월 이후 소고기 철분 보충 월령별 정량(g) 계산 & 부위 추천</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-5">[아기 조건]
+- 월령: 생후 7개월 (중기 1단계 진입)
+- 체중: 8.5kg
+- 고민: 빈혈 예방을 위해 매일 소고기를 먹여야 한다는데 정확한 양과 부위를 모름
+
+[요청 사항]
+1. 생후 7개월 아기의 하루 권장 소고기 섭취량(g)과 10개월, 12개월 때 늘어나는 정량을 표로 비교해줘.
+2. 기름기가 적고 철분 흡수율이 높은 추천 부위 3가지(안심, 우둔살, 홍두깨 등)의 장단점과 핏물 빼는 적정 시간을 알려줘.
+3. 비타민 C가 풍부해 철분 흡수를 돕는 궁합 채소와 함께 피해야 할 상극 식재료를 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 철분 보충을 위한 핏물 빼기는 찬물에 15~20분만 담가야 영양 손실을 막을 수 있으며, 브로콜리와 함께 먹이면 흡수율이 올라갑니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 보건복지부 / 한국영양학회 2025 한국인 영양소 섭취기준</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="meal" id="p-6">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#06</span>
+            <span class="badge-cat cat-meal">이유식·유아식</span>
+            <span class="badge-age">👶 생후 6~9개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(6)" id="copy-btn-6" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아이주도이유식(BLW) 첫 시작 핑거푸드 안전 크기 & 질감 가이드</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-6">[BLW 시작 조건]
+- 월령: 생후 6개월 반
+- 발달: 스스로 허리 꼿꼿이 세워 의자에 10분 이상 앉아있음, 손에 닿는 물건을 입으로 가져감
+
+[요청 사항]
+1. 질식 위험을 방지하기 위한 첫 핑거푸드(당근, 단호박, 바나나 등)의 어른 손가락 크기 기준과 찌는 무르기 정도를 구체적으로 묘사해줘.
+2. 헛구역질(Gagging)과 진짜 질식(Choking)의 증상 차이점과 부모가 절대 당황해서 손가락을 아기 입에 쑤셔 넣지 말아야 하는 이유를 설명해줘.
+3. 바닥 청소를 80% 줄여주는 실리콘 턱받이와 흡착 식판 세팅 요령을 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 아기가 헛구역질(켁켁거림)을 할 때는 자가 기도확보 반사이므로 부모가 조용히 지켜보고, 소리 없는 질식 징후일 때만 응급처치를 합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 질병관리청 및 영유아 기도폐쇄 예방 공식 안전 수칙</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="meal" id="p-7">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#07</span>
+            <span class="badge-cat cat-meal">이유식·유아식</span>
+            <span class="badge-age">👶 생후 7~12개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(7)" id="copy-btn-7" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">시판 이유식 + 홈메이드 큐브 혼합 급여 영양 밸런스 점검</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-7">[현재 급여 상황]
+- 월령: 후기 10개월
+- 방식: 평일 아침/점심은 시판 이유식 파우치(150g)를 데워 먹이고, 저녁은 집에서 만든 소고기/채소 큐브를 밥에 비벼 먹임
+- 걱정: 시판 이유식에 고기 함량이 부족하지 않은지, 나트륨이나 첨가물 문제는 없는지 궁금함
+
+[요청 사항]
+1. 시판 파우치에 부족하기 쉬운 단백질(육류)이나 채소를 집에서 만든 큐브로 보충하는 최적의 비율(g)을 제시해줘.
+2. 시판 제품 영양성분표에서 영아 후기 기준 반드시 체크해야 할 나트륨 및 단백질 기준치를 알려줘.
+3. 부모의 죄책감을 덜어주는 '시판+홈메이드 하이브리드'의 현실적인 장점 3가지를 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 시판 이유식 1팩에 소고기 큐브 15g과 채소 큐브 1개만 퐁당 넣고 데우면 엄마 아빠 체력도 아끼고 완벽한 영양식이 완성됩니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 육아정책연구소 맞벌이 가구 영양 지원 실태 분석</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="meal" id="p-8">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#08</span>
+            <span class="badge-cat cat-meal">이유식·유아식</span>
+            <span class="badge-age">👶 생후 12~18개월 (완료기/유아식)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(8)" id="copy-btn-8" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">돌 이후 완료기 유아식 소금 간 안 한 저염 반찬 7일 플래너</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-8">[우리 아기 상태]
+- 월령: 생후 13개월 (첫돌 지남)
+- 식사 형태: 진밥을 졸업하고 무른 밥과 아기 반찬 2가지, 국으로 넘어가려 함
+- 조건: 소금이나 간장 등 인공 조미료 간을 하지 않고 천연 재료(채수, 다시마, 과일)로 감칠맛 내기
+
+[요청 사항]
+1. 월요일부터 일요일까지 7일간 아침/점심/저녁 3찬(밥+국+단백질반찬+채소반찬) 저염 식단표를 짜줘.
+2. 간 없이도 아기가 맛있게 먹을 수 있는 '만능 아기 채수' 끓이는 간단 레시피를 알려줘.
+3. 한 번 만들어 3일간 돌려 쓸 수 있는 밑반찬 2가지(예: 두부조림, 소고기완자 등) 조리법을 요약해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 돌 전후에는 아직 콩팥 신장 기능이 미숙하므로 인위적인 간 대신 사과즙, 양파, 버섯 채수로 단맛과 감칠맛을 내는 것이 좋습니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 소아청소년과학회 돌 이후 영유아 저염 식습관 형성 권고</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="sleep" id="p-9">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#09</span>
+            <span class="badge-cat cat-sleep">수면·깨시</span>
+            <span class="badge-age">👶 생후 4~12개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(9)" id="copy-btn-9" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">오늘 수면 기록 메모 바탕 적정 깨시(깨어있는 시간) 분석기</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-9">[오늘 수면 기록 메모]
+- 기상: 07:10
+- 1차 낮잠: 10:20 ~ 11:30 (1시간 10분)
+- 2차 낮잠: 15:00 ~ 16:10 (1시간 10분)
+- 밤잠 입면: 20:30 (현재 수면 중)
+
+[요청 사항]
+1. 오늘 총 낮잠 시간과 깨어있는 시간(각 깨시)을 분 단위로 계산해줘.
+2. 10개월 아기 표준 적정 깨시(약 3시간~3시간 30분)와 비교해서 오늘 패턴이 적절했는지 담백하게 요약해줘.
+3. 내일 아침 기상 예상 시간과 첫 낮잠 권장 타이밍을 추천해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 낮잠 시작 시각과 종료 시각만 적어 넣으면 분 단위 깨시 계산과 함께 밤잠 입면 실패 원인을 바로 짚어줍니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한소아청소년과학회 영유아 표준 수면 주기 및 적정 각성 시간</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="sleep" id="p-10">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#10</span>
+            <span class="badge-cat cat-sleep">수면·깨시</span>
+            <span class="badge-age">👶 생후 3~8개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(10)" id="copy-btn-10" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">낮잠 30분 칼기상 방지 — 수면 사이클 연결 & 낮잠 연장 수면의식</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-10">[아기 낮잠 고민]
+- 월령: 생후 5개월
+- 증상: 낮잠에 눕히면 정확히 28분~30분 만에 눈을 번쩍 뜨고 울면서 보챔
+- 안아서 흔들어주면 다시 자는데, 바닥에 내려놓으면 바로 깸
+
+[요청 사항]
+1. 아기가 30분 만에 깨는 신경학적 수면 주기(REM -&gt; NREM 전환기) 원인을 부모가 알기 쉽게 설명해줘.
+2. 깨기 5분 전(25분경) 침대 옆에서 개입하여 스스로 다음 사이클로 넘어가도록 돕는 '쉬닥/토닥' 낮잠 연장 기술을 알려줘.
+3. 방 조도(암막 정도)와 백색소음 볼륨(dB) 세팅 기준을 점검해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 아기가 깨서 완전히 눈을 뜨기 5분 전(약 25분 시점)에 침대 옆에 미리 가서 살짝 손을 얹어주면 수면 사이클이 부드럽게 이어집니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 국제영유아수면연구 수면 주기 및 각성 방지 임상 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="sleep" id="p-11">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#11</span>
+            <span class="badge-cat cat-sleep">수면·깨시</span>
+            <span class="badge-age">👶 생후 6~9개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(11)" id="copy-btn-11" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">밤수(밤중 수유) 단계적 단유 및 6개월 이후 통잠 유도 스케줄</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-11">[아기 현재 상태]
+- 월령: 생후 7개월
+- 체중: 8.8kg (성장곡선 정상)
+- 이유식: 중기 하루 2회 잘 먹음
+- 밤수 현황: 새벽 1시, 4시에 깨서 분유 100ml씩 총 2회 수유 중
+
+[요청 사항]
+1. 소아청소년과 권고(생후 6개월 이후 야간 수유 중단 가능)에 따라 7일간 단계적으로 밤수를 줄이는 '수유량 감량법' 스케줄을 짜줘.
+2. 아기가 새벽에 깼을 때 젖병 대신 공갈젖꼭지나 보리차, 토닥임으로 다시 잠들게 하는 대체 진정 프로토콜을 알려줘.
+3. 밤수를 끊었을 때 낮 동안 보충해야 할 총 수유량과 이유식 칼로리 배분 팁을 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 새벽에 깰 때마다 분유량을 20~30ml씩 3일 간격으로 줄이고 물로 대체하면 배고픔이 아닌 습관성 각성을 자연스럽게 교정할 수 있습니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한소아치과학회 및 소아청소년과학회 야간 수유 충치 예방 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="sleep" id="p-12">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#12</span>
+            <span class="badge-cat cat-sleep">수면·깨시</span>
+            <span class="badge-age">👶 생후 4, 8, 12개월 (원더윅스기)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(12)" id="copy-btn-12" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">원더윅스(급성장기) 수면 퇴행 시기 예측 및 대처 가이드</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-12">[우리 아기 이상 증상]
+- 월령: 생후 18주 (출산 예정일 기준)
+- 증상: 평소 통잠 자던 아기가 갑자기 밤에 1시간마다 깨서 오열하고, 껌딱지처럼 안겨있으려 함
+- 체온: 정상(36.8도), 기침/콧물 없음
+
+[요청 사항]
+1. 생후 4개월 차에 일어나는 인지 발달 및 수면 구조 변화(4개월 슬립 리그레션)의 과학적 배경을 설명해줘.
+2. 이 시기 부모가 '수면 습관이 망가졌다'고 자책하지 않고 대처할 수 있는 낮 동안의 애착 형성 놀이 3가지를 제안해줘.
+3. 이 급성장기가 평균 며칠 정도 지속되며, 언제쯤 수면 패턴이 다시 정상화되는지 현실적인 회복 타임라인을 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 수면 퇴행은 뇌 신경망이 폭발적으로 발달하는 정상적인 과정이므로 새로운 나쁜 수면 연관(흔들어 재우기 등)을 굳히지 않도록 주의합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 육아정책연구소(KICCE) 영아기 뇌발달 및 급성장기 스트레스 대처</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="sleep" id="p-13">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#13</span>
+            <span class="badge-cat cat-sleep">수면·깨시</span>
+            <span class="badge-age">👶 생후 4~9개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(13)" id="copy-btn-13" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">퍼버법 vs 안눕법 — 우리 아기 기질 맞춤 수면교육 방식 비교</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-13">[우리 아기 특성]
+- 월령: 생후 6개월
+- 기질: 소리에 민감하고 자극에 쉽게 흥분함, 낯선 환경을 두려워하지만 부모 목소리를 들으면 안정을 찾음
+- 부모 성향: 아기가 10분 이상 심하게 우는 것을 부모가 심리적으로 견디기 힘들어함
+
+[요청 사항]
+1. 대표적 수면교육 방식인 퍼버법(점진적 소거법)과 안눕법(안았다 눕히기), 쉬닥법의 작동 원리와 장단점을 비교해줘.
+2. 우리 아기 기질과 부모 성향에 가장 부작용이 적고 애착을 해치지 않는 추천 방식 1가지를 선정하고 이유를 밝혀줘.
+3. 수면교육을 시작하기 위해 선행되어야 할 낮잠-밤잠 수면의식(목욕, 마사지, 책읽기 등) 4단계 루틴을 세팅해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 아기가 우는 소리를 견디기 힘들다면 무리한 퍼버법 대신 같은 방에서 의자 거리를 넓혀가는 페이딩(Fading)법이 정서에 좋습니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 미국수면의학회(AASM) 소아 수면 행동 중재 가이드라인</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="sleep" id="p-14">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#14</span>
+            <span class="badge-cat cat-sleep">수면·깨시</span>
+            <span class="badge-age">👶 생후 13~18개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(14)" id="copy-btn-14" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">낮잠 2회에서 1회로 줄어드는 과도기 스케줄 과피로 방지 조율</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-14">[아기 낮잠 과도기 상태]
+- 월령: 생후 14개월
+- 상황: 오전 낮잠을 재우면 오후 낮잠을 안 자려 하고, 오전 낮잠을 건너뛰면 오후 4시에 쓰러져서 밤잠을 밤 11시에 잠
+- 목표: 낮잠 1회(오후 12:30~14:30)로 부드럽게 통합 전환하기
+
+[요청 사항]
+1. 낮잠 2회에서 1회로 전환할 준비가 되었다는 신호 3가지를 체크리스트로 알려줘.
+2. 과피로(Overtired)로 밤에 오열하지 않도록 오전 낮잠을 20분만 재우는 '브릿지 낮잠'을 활용한 2주 전환 시간표를 짜줘.
+3. 전환 기간 동안 밤잠 입면 시각을 일시적으로 30분 앞당겨야 하는 이유를 설명해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 낮잠 전환기에는 아기가 오후에 피로가 쌓여 칭얼대므로 평소보다 밤잠을 30분~1시간 일찍 재우는 것이 과피로를 막는 핵심입니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 국제소아수면협회 낮잠 횟수 전환기 생체리듬 조율 권고</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="sleep" id="p-15">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#15</span>
+            <span class="badge-cat cat-sleep">수면·깨시</span>
+            <span class="badge-age">👶 생후 5~24개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(15)" id="copy-btn-15" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">여행·시댁 방문 후 망가진 수면 리듬 3일 복구 루틴</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-15">[수면 리듬 붕괴 상황]
+- 월령: 생후 11개월
+- 사유: 주말에 시댁/여행지에서 2박 3일 지내며 카시트에서 토막잠 자고, 밤 10시에 자는 등 리듬이 완전히 깨짐
+- 현재: 집에 돌아온 뒤 낮잠도 안 자고 밤마다 자지러지게 울며 입면 거부
+
+[요청 사항]
+1. 낯선 환경 자극으로 과각성된 아기 뇌를 진정시키고 원래 생체시계로 되돌리는 '3일 리셋 플랜'을 단계별로 짜줘.
+2. 집에 있는 익숙한 수면 환경(백색소음기, 수면조끼, 암막 커튼, 애착 인형)을 즉각 재세팅하는 가이드를 정리해줘.
+3. 부모가 조급함에 다시 흔들어 재우는 실수를 하지 않도록 마인드 컨트롤 문장 2가지를 적어줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 여행 직후에는 아침 기상 시각만 칼같이 평소 시각(예: 7시)에 깨우고 햇볕을 쐬어주면 3일 안에 생체 리듬이 제자리로 돌아옵니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한수면연구학회 영유아 일주기 리듬 재동기화 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="sleep" id="p-16">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#16</span>
+            <span class="badge-cat cat-sleep">수면·깨시</span>
+            <span class="badge-age">👶 생후 6~18개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(16)" id="copy-btn-16" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아침 5시 조기 기상(새벽 기상) 교정 및 암막/빛 조절 루틴</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-16">[새벽 기상 고민]
+- 월령: 생후 9개월
+- 증상: 밤 8시에 자서 아침 5시~5시 15분만 되면 칼같이 눈을 떠서 놀자고 옹알이함
+- 방 환경: 일반 커튼 사용 중이라 동틀 때 살짝 햇빛이 들어옴
+
+[요청 사항]
+1. 5시 기상이 '완전한 수면 종료'가 아닌 '수면 연장 실패'인 원인 3가지(빛 자극, 새벽 체온 저하, 기저귀 묵직함)를 분석해줘.
+2. 멜라토닌 분비를 돕는 100% 암막 환경 세팅법과 5시에 깼을 때 불을 켜지 않고 대처하는 부모의 행동 지침을 알려줘.
+3. 기상 목표 시각을 오전 6시 30분으로 늦추기 위한 낮잠 시간표 재배치 제안을 해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 새벽 5시에 깼을 때 바로 거실로 데리고 나와 불을 켜면 뇌가 그 시간을 아침으로 각인하므로, 최소 6시까지는 어두운 방에서 유지하세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한소아청소년과학회 수면환경 빛 노출과 멜라토닌 생체시계 연구</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="health" id="p-17">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#17</span>
+            <span class="badge-cat cat-health">건강·병원</span>
+            <span class="badge-age">👶 전 월령 (0~36개월)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(17)" id="copy-btn-17" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">소아과 30초 진료 메모 — 발열 타임라인 & 교차투약 요약</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-17">[주의: 의학적 진단은 소아과 의사 선생님께 받습니다. 이 메모는 진료실에서 빠짐없이 설명하기 위한 요약 메모용입니다.]
+
+[관찰 기록 메모]
+- 1일 차(어제): 저녁 8시 미열 37.8도 시작, 해열제 안 먹임, 콧물 조금
+- 2일 차(오늘): 새벽 2시 38.4도 (아세트아미노펜 3.5ml 복용), 아침 37.5도, 낮 12시 38.6도 (이부프로펜 3.5ml 교차복용)
+- 현재 상태: 밥은 평소의 약 70% 정도 먹음 (추정), 처짐 없음, 기침 소리 쌕쌕거림 없음
+
+[요청 사항]
+의사 선생님이 30초 안에 한눈에 보실 수 있게 '발열 타임라인', '투약 시간 및 용량', '식사/기운/호흡 상태'로 명확한 불렛포인트 3블록으로 요약해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 체온 숫자와 함께 해열제 계열명(아세트아미노펜/이부프로펜)과 투약 시각, 아이의 쳐짐 여부를 3블록으로 보여드리면 진료가 빠르고 정확합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 질병관리청 국가건강정보포털 소아 발열 및 해열제 투약 가이드라인</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="health" id="p-18">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#18</span>
+            <span class="badge-cat cat-health">건강·병원</span>
+            <span class="badge-age">👶 생후 4~71개월 (검진 시기별)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(18)" id="copy-btn-18" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">영유아 건강검진 사전 문진표 정리 & 의사 상담 질문 3가지</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-18">[우리 아기 건강검진 정보]
+- 차수: 3차 영유아 건강검진 (생후 9~12개월용)
+- 현재 월령: 생후 10개월 반
+- 부모 관찰 사항: 짚고 서기는 잘하는데 아직 박수 치기(짝짜꿍)나 바이바이 손흔들기를 안 함, 숟가락으로 먹여줄 때 혀로 자주 밈
+
+[요청 사항]
+1. 3차 검진 발달 선별검사(K-DST) 대근육/소근육/인지/언어/사회성 영역별 핵심 체크 문항을 미리 시뮬레이션해줘.
+2. 진료실에서 3분 짧은 시간 동안 의사 선생님께 꼭 확인받아야 할 핵심 질문 3가지를 명확한 어조로 다듬어줘.
+3. 검진 당일 아기가 울어서 발달 평가를 제대로 못 받지 않도록 최상의 컨디션을 만드는 방문 시간 팁을 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 국민건강보험공단 앱에서 문진표를 미리 작성하고, 집에서 잘하는 동작은 10초짜리 동영상으로 찍어가서 보여드리면 판정에 큰 도움이 됩니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 보건복지부 / 질병관리청 한국 영유아 발달선별검사(K-DST) 지침</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="health" id="p-19">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#19</span>
+            <span class="badge-cat cat-health">건강·병원</span>
+            <span class="badge-age">👶 전 월령</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(19)" id="copy-btn-19" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기 감기 증상(콧물·기침·가래) 홈케어 온습도 및 체위 기록</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-19">[현재 감기 증상 메모]
+- 월령: 생후 8개월
+- 증상: 맑은 콧물에서 누런 콧물로 변함, 밤에 누우면 코가 뒤로 넘어가서 쿨럭거리며 기침함
+- 실내 환경: 온도 24도, 습도 40%
+
+[요청 사항]
+1. 소아청소년과 기준 영유아 호흡기 질환 시 이상적인 실내 적정 온습도(온도 20~22도, 습도 50~60%) 세팅법을 안내해줘.
+2. 밤에 코막힘으로 잠 못 자는 아기를 위해 머리를 살짝 높여주는 안전한 경사 베개 수건 활용 체위 팁을 알려줘.
+3. 뺑코나 노시부 콧물 흡입기 사용 시 비강 점막 손상을 막기 위한 하루 적정 사용 횟수와 식염수 분무 팁을 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 콧물 흡입기는 목욕 직후나 생리식염수를 한 방울 떨어뜨려 불린 뒤 최저 흡입력으로 하루 2~3회만 사용하는 것이 점막을 보호합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한소아청소년과학회 소아 호흡기 감염 홈케어 및 환경 관리 지침</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="health" id="p-20">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#20</span>
+            <span class="badge-cat cat-health">건강·병원</span>
+            <span class="badge-age">👶 생후 1~24개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(20)" id="copy-btn-20" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">설사·변비 시 기저귀 횟수 및 대변 양상(브리스톨 척도) 메모</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-20">[배변 관찰 메모]
+- 월령: 생후 7개월
+- 최근 변화: 어제부터 노란 물변을 하루 5회 봄 (기저귀 밖으로 샘)
+- 수유 상태: 분유는 평소 800ml 먹는데 오늘은 500ml만 먹음, 소변 기저귀는 4회 나옴
+
+[요청 사항]
+1. 소아과 진료를 위해 대변 횟수, 색깔, 점액/혈변 유무, 냄새를 의학적으로 간결하게 전달하는 브리핑 메모를 작성해줘.
+2. 영유아 탈수를 의심할 수 있는 징후 4가지(소변량 감소, 입술 마름, 눈물 없이 움, 대천문 꺼짐) 체크리스트를 점검해줘.
+3. 설사할 때 임의로 지사제를 먹이면 안 되는 이유와 엉덩이 물세안 건조 수칙을 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 아기 변 상태가 의심스러울 때는 버리지 말고 기저귀를 지퍼백에 밀봉해 병원에 가져가거나, 고해상도 사진을 찍어 의사에게 보여주세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 질병관리청 영유아 급성 장염 및 탈수 예방 임상 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="health" id="p-21">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#21</span>
+            <span class="badge-cat cat-health">건강·병원</span>
+            <span class="badge-age">👶 생후 0~12개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(21)" id="copy-btn-21" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">침독 & 기저귀 발진 부위별 보습/연고 도포 순서 메모</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-21">[피부 트러블 증상]
+- 턱/볼: 침을 많이 흘려 붉게 오돌토돌 올라오고 각질이 일어남 (침독)
+- 엉덩이: 사타구니와 항문 주위가 붉게 달아오름 (기저귀 발진)
+- 보유 제품: 일반 아기 수분크림, 비판텐(덱스판테놀), 소아과 처방 리도멕스(0.15% 스테로이드)
+
+[요청 사항]
+1. 침독과 기저귀 발진 부위에 보습제, 비판텐, 스테로이드 연고를 바르는 올바른 도포 순서와 흡수 시간 간격을 명확히 지정해줘.
+2. 엉덩이 발진 시 물티슈 대신 미온수 물세안 후 부채질로 '완전 건조'시켜야 하는 이유를 설명해줘.
+3. 칸디다 곰팡이균 감염과 단순 발진의 육안 구분 팁과 병원 재방문 기준을 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 스테로이드 처방 연고는 얇게 소량만 먼저 바르고 5분 뒤 흡수되면 비판텐이나 보습제를 덧발라 피부 장벽을 보호합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한소아피부과학회 영유아 접촉성 피부염 및 발진 도포 지침</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="health" id="p-22">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#22</span>
+            <span class="badge-cat cat-health">건강·병원</span>
+            <span class="badge-age">👶 생후 2~18개월 (접종기)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(22)" id="copy-btn-22" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">예방접종 후 24시간 열·접종부위 반응 관찰 타임라인</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-22">[예방접종 기록]
+- 접종일: 오늘 오전 10:30
+- 접종 백신: DTaP, 폴리오, 뇌수막염, 폐렴구균 (생후 4개월 접종)
+- 현재 시각: 접종 후 6시간 경과 (오후 16:30), 미열 37.6도 시작, 주사 맞은 허벅지가 살짝 붉음
+
+[요청 사항]
+1. 접종 후 24시간 동안 시간대별(6시간, 12시간, 24시간) 주요 발열 피크 타이밍과 관찰 포인트를 타임라인으로 정리해줘.
+2. 주사 맞은 부위 붓기와 멍울에 쿨링 패치나 냉찜질을 적용하는 올바른 방법(직접 얼음 금지)을 안내해줘.
+3. 접종열에 해열제를 복용시키는 체온 기준(38도 이상 및 보챔)과 다음 날 소아과에 연락해야 하는 기준을 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 폐렴구균 접종열은 당일 밤~다음 날 새벽이 피크이므로 밤새 2시간 간격으로 체온을 체크하고 미온수 마사지를 준비해 두세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 질병관리청 예방접종도우미 표준 예방접종 후 이상반응 관리 지침</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="health" id="p-23">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#23</span>
+            <span class="badge-cat cat-health">건강·병원</span>
+            <span class="badge-age">👶 전 월령</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(23)" id="copy-btn-23" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">응급실 달려가기 전 필수 체크 5가지 위험 징후 자가점검</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-23">[긴급 자가점검 요청]
+- 현재 상황: 아기가 밤 11시에 열 38.8도, 보채다가 축 처져 있음
+- 고민: 지금 바로 야간 달빛어린이병원이나 대학병원 응급실로 가야 할지, 집에서 지켜봐야 할지 판단이 서지 않음
+
+[요청 사항]
+1. 질병관리청 기준 '지체 없이 응급실로 가야 하는 소아 5대 레드플래그 징후'(생후 3개월 미만 발열, 의식 처짐, 호흡곤란, 경련, 자반증)를 명확히 불렛으로 제시해줘.
+2. 응급실 출발 시 반드시 챙겨야 할 필수 3가지(아기 수첩/주민번호, 먹이던 분유/기저귀, 최근 투약한 해열제 병)를 리스트업해줘.
+3. 야간 진료가 가능한 주변 '달빛어린이병원' 검색 방법과 119 구급상황관리센터 의료상담 활용법을 안내해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 생후 100일 미만 아기의 38도 이상 발열이나, 해열제를 먹여도 눈을 못 맞추고 축 처지는 상태는 지체 없이 응급실로 가야 합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 질병관리청 소아 응급 진료 가이드라인 및 응급의학회 권고</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="health" id="p-24">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#24</span>
+            <span class="badge-cat cat-health">건강·병원</span>
+            <span class="badge-age">👶 생후 6~36개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(24)" id="copy-btn-24" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기 복약 지도 — 쓴 가루약/시럽약 거부 없이 먹이는 방법</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-24">[복약 거부 상황]
+- 월령: 생후 12개월
+- 처방: 항생제 시럽 4ml + 가루약 1포 (하루 3회 복용)
+- 증상: 약 숟가락만 보면 고개를 젓고 오열하며, 억지로 넣으면 사레들려 다 토해버림
+
+[요청 사항]
+1. 가루약을 물이나 시럽에 갤 때 쓴맛을 최소화하는 꿀팁(단맛 시럽 소량 혼합, 사과 퓨레 한 스푼 등)을 알려줘.
+2. 억지로 입을 벌리지 않고 투약용 주사기나 투약병을 이용해 볼 안쪽(치아 뒤쪽)으로 조금씩 밀어 넣는 물리적 테크닉을 설명해줘.
+3. 약을 먹인 직후 아기가 구토했을 때 즉시 다시 먹여야 하는지 여부를 판단하는 시간(10분 이내 vs 30분 경과) 기준을 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 가루약은 혀의 앞부분(단맛)보다 쓴맛을 느끼는 혀 뒤쪽을 피해 볼 안쪽 살 쪽으로 투약 전용 피펫을 대고 조금씩 쏴주면 덜 토합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한약사회 및 소아청소년과 영유아 올바른 의약품 복용 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="outing" id="p-25">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#25</span>
+            <span class="badge-cat cat-outing">외출·패킹</span>
+            <span class="badge-age">👶 생후 6~18개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(25)" id="copy-btn-25" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">4시간 외출 가방 패킹 — 가방 위아래 수납 순서 체크리스트</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-25">[외출 조건]
+- 목적지: 근처 백화점 및 유아휴게실
+- 외출 시간: 오후 1시 ~ 5시 (약 4시간 외출)
+- 아기 월령: 10개월 (이유식 1끼 + 분유 1회 포함)
+- 날씨: 맑음 (최고 20도, 최저 12도, 실내 냉난방)
+
+[요청 사항]
+1. 가방에 챙겨야 할 필수 준비물 체크리스트를 '수유/이유식', '기저귀/위생', '보온/의류', '놀이/비상'으로 분류해줘.
+2. 기저귀 가방 안에서 바로 꺼낼 수 있게 '위쪽에 넣을 3가지'와 '아래쪽에 넣을 물건'을 패킹 순서로 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 물티슈와 기저귀, 쪽쪽이는 가방 맨 위 지퍼에 넣고, 무거운 보온병과 여벌옷은 맨 아래에 넣어야 뒤적거리지 않습니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 육아정책연구소(KICCE) 아빠 육아 참여 돌봄 준비 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="outing" id="p-26">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#26</span>
+            <span class="badge-cat cat-outing">외출·패킹</span>
+            <span class="badge-age">👶 생후 3~24개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(26)" id="copy-btn-26" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기와의 첫 KTX / 기차 탑승 필수 준비물 & 수유실 명당 팁</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-26">[기차 여행 조건]
+- 탑승 열차: KTX 서울역 -&gt; 부산역 (약 2시간 40분 소요)
+- 아기 월령: 생후 8개월
+- 동반자: 부부 + 아기 (일반실 예약 예정)
+
+[요청 사항]
+1. KTX 열차 내 수유실, 기저귀 교환대, 전자레인지(이유식 데우기용)가 구비된 추천 호차(8호차 등 유아동반석) 정보를 알려줘.
+2. 기차가 달리는 동안 아기가 울거나 칭얼댈 때 소음을 차단하고 달랠 수 있는 '초소형 진정템' 3가지를 추천해줘.
+3. 열차 내 좁은 통로에서 유모차를 접어 보관할 수 있는 짐칸 위치와 승하차 동선 팁을 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> KTX는 수유실이 있는 8호차 근처 복도 쪽 통로 좌석을 예매하면 아기가 보챌 때 1초 만에 객차 밖으로 나가 달래기 좋습니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 한국철도공사(코레일) 열차 내 유아 동반 승객 편의시설 안내</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="outing" id="p-27">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#27</span>
+            <span class="badge-cat cat-outing">외출·패킹</span>
+            <span class="badge-age">👶 생후 6~24개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(27)" id="copy-btn-27" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기 비행기 탑승(제주/국내선) 이착륙 귀통증 방지 & 기내 가방 리스트</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-27">[비행기 탑승 조건]
+- 노선: 김포 -&gt; 제주 (비행시간 약 1시간 10분)
+- 아기 월령: 생후 9개월
+- 좌석: 부모 무릎에 앉히는 유아 좌석(Infant)
+
+[요청 사항]
+1. 이착륙 시 기압 변화로 인한 아기 귀 통증(항공성 중이염)을 방지하기 위해 침을 삼키게 하는 수유/빨대컵 타이밍을 분 단위로 알려줘.
+2. 위탁 수하물로 부치지 말고 비행기 기내로 들고 타야 하는 '생존 기내 가방' 필수 물품 5가지를 골라줘.
+3. 공항 검색대 통과 시 아기 이유식, 보온병 온수, 분유 액체류 반입 예외 규정 팁을 안내해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 비행기 바퀴가 활주로를 떠나는 순간과 착륙 안내 방송이 나올 때 쪽쪽이나 떡뻥, 빨대컵 보리차를 물려 침을 꼴깍 삼키게 하세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 국토교통부 항공 보안 유아 동반 액체류 반입 규정 및 항공의학회 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="outing" id="p-28">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#28</span>
+            <span class="badge-cat cat-outing">외출·패킹</span>
+            <span class="badge-age">👶 전 월령</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(28)" id="copy-btn-28" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">환절기(일교차 10도 이상) 외출 겹쳐 입히기 옷차림 가이드</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-28">[외출 날씨 정보]
+- 계절: 늦가을 / 초봄 환절기
+- 기온: 아침 최저 8도, 낮 최고 19도 (일교차 11도)
+- 장소: 야외 공원 산책 1시간 + 실내 카페 1시간
+- 아기 월령: 7개월
+
+[요청 사항]
+1. 두꺼운 옷 한 벌보다 얇은 옷을 여러 겹 겹쳐 입히는 '양파 껍질 코디'(바디수트+가디건+바람막이+블랭킷) 조합을 부위별로 지정해줘.
+2. 아기가 더운지 추운지 체온을 정확하게 판별할 수 있는 신체 부위(손발 차가움 vs 뒷목/등 땀) 확인법을 설명해줘.
+3. 바람막이 모자, 넥워머, 양말 등 말초 부위 체온 보호 아이템 활용 팁을 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 아기 손발은 원래 혈액순환 상 차가울 수 있으므로 추위 여부는 손발이 아닌 옷 속 뒷목이나 등 뒤를 만져 땀이 나는지로 판단하세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 소아청소년과학회 영유아 체온 조절 특성 및 계절별 외출 지침</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="outing" id="p-29">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#29</span>
+            <span class="badge-cat cat-outing">외출·패킹</span>
+            <span class="badge-age">👶 생후 2~18개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(29)" id="copy-btn-29" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">유모차 vs 아기띠 장소별 최적 선택 & 외출 가방 분리 팁</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-29">[외출 상황 비교]
+- 상황 A: 주말 붐비는 대형 쇼핑몰 및 식당
+- 상황 B: 동네 울퉁불퉁한 골목길 병원 및 약국
+- 상황 C: 혼자서 아기 안고 대중교통(지하철/버스) 타기
+
+[요청 사항]
+1. 각 상황별로 디럭스/절충형/휴대용 유모차와 힙시트 아기띠 중 부모 척추와 이동 편의성에 가장 적합한 조합을 매칭해줘.
+2. 유모차 장바구니에 실을 '대형 짐가방'과 아기띠 맸을 때 몸에 착용하는 '초미니 크로스백(핸드폰, 카드, 쪽쪽이)' 분리 수납법을 정리해줘.
+3. 엘리베이터가 없는 지하철역이나 좁은 식당에서 빠르게 대처하는 기동성 팁을 알려줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 사람 많은 곳 갈 때는 유모차 아래 바구니에 큰 기저귀 가방을 두고, 스마트폰과 카드, 쪽쪽이는 작은 슬링백에 따로 차면 손이 자유롭습니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 한국소비자원 유모차 및 영유아 이동 보조기구 안전 사용 실태</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="outing" id="p-30">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#30</span>
+            <span class="badge-cat cat-outing">외출·패킹</span>
+            <span class="badge-age">👶 생후 6~24개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(30)" id="copy-btn-30" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">외식/식당 방문 시 아기 의자 소독 & 얌전템 3단계 가방</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-30">[식당 외식 상황]
+- 장소: 일반 식당 (아기의자 하이체어 구비됨)
+- 아기 월령: 생후 11개월
+- 고민: 엄빠가 밥 먹는 30분 동안 아기가 지루해서 소리 지르거나 식탁 위 그릇을 엎을까 봐 불안함
+
+[요청 사항]
+1. 식당 아기의자에 앉히기 전 세균 번식을 막기 위한 안심 살균 소독 티슈 닦기 동선을 알려줘.
+2. 밥 먹는 30분을 버티게 해주는 얌전템 3단계(1단계: 떡뻥/치즈볼 간식 -&gt; 2단계: 흡착 회전 딸랑이/스티커북 -&gt; 3단계: 새로운 실리콘 장난감) 시간 배분표를 짜줘.
+3. 식탁 위 뜨거운 국물이나 가위 등 위험 물질로부터 안전거리를 확보하는 자리 배치 팁을 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 얌전템 장난감은 집에서 매일 보던 것 말고 외출 가방에만 넣어둔 "외출 전용 신상 장난감"을 꺼내야 집중 시간이 3배 늘어납니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 한국식품위생안전성학회 다중이용시설 유아용 하이체어 위생 권고</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="outing" id="p-31">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#31</span>
+            <span class="badge-cat cat-outing">외출·패킹</span>
+            <span class="badge-age">👶 생후 6~36개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(31)" id="copy-btn-31" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">여름철/물놀이 아기 외출 자외선 차단 & 체온 유지 가방 리스트</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-31">[여름 물놀이 외출]
+- 목적지: 야외 잔디 분수대 및 키즈 풀장
+- 아기 월령: 생후 12개월
+- 날씨: 한낮 기온 31도, 자외선 지수 매우 높음
+
+[요청 사항]
+1. 미국 소아과학회(AAP) 기준 생후 6개월 이상 아기를 위한 무기자차 선크림 선택법과 덧바르는 주기(물놀이 시)를 알려줘.
+2. 물에서 나왔을 때 급격한 체온 저하(저체온증)를 막기 위한 비치 판초 타월과 보온 보리차 준비 요령을 정리해줘.
+3. 방수 기저귀와 일반 기저귀의 차이점 및 물 밖으로 나오자마자 일반 기저귀로 갈아입혀야 하는 이유를 설명해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 방수 기저귀는 대변만 막아주고 소변은 흡수하지 못하므로, 물 밖으로 나오면 즉시 벗기고 일반 기저귀로 갈아 입혀야 발진이 안 생깁니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 미국소아과학회(AAP) 영유아 일광 화상 예방 및 자외선 차단 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="play" id="p-32">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#32</span>
+            <span class="badge-cat cat-play">발달·놀이</span>
+            <span class="badge-age">👶 생후 6~12개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(32)" id="copy-btn-32" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">생후 6~12개월 집콕 촉감 놀이 — 종이컵/지퍼백 물놀이 5가지</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-32">[집콕 놀이 조건]
+- 대상: 생후 8개월 아기
+- 상황: 비가 와서 하루 종일 외출 못 하고 집에만 있음
+- 조건: 비싼 장난감 사지 않고 집에 있는 일상 용품(지퍼백, 쌀, 종이컵, 물, 얼음 등)만 활용하여 오감 자극하기
+
+[요청 사항]
+1. 어지럽히지 않고 뒷정리가 3분 안에 끝나는 안전한 집콕 감각 놀이 5가지를 구체적인 놀이 방법과 함께 소개해줘.
+2. 입에 물건을 가져가는 구강기 아기를 위해 질식 위험을 원천 차단하는 지퍼백 테이핑 밀봉 안전 팁을 알려줘.
+3. 각 놀이가 소근육, 청각, 촉각 발달에 미치는 긍정적 효과를 요약해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 지퍼백 안에 물과 반짝이, 얼음을 넣고 입구를 박스테이프로 단단히 붙여 거실 바닥에 붙여주면 어지럽히지 않고 30분 촉감 놀이가 가능합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 육아정책연구소(KICCE) 영아 감각 운동 발달을 위한 가정 내 놀이 환경</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="play" id="p-33">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#33</span>
+            <span class="badge-cat cat-play">발달·놀이</span>
+            <span class="badge-age">👶 생후 2~6개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(33)" id="copy-btn-33" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">뒤집기·되집기·배밀이 유도하는 거실 터미타임 환경 세팅</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-33">[대근육 발달 고민]
+- 월령: 생후 4개월
+- 상태: 바닥에 엎어놓으면(터미타임) 1분도 안 돼서 얼굴을 파묻고 낑낑대며 웁니다.
+- 목표: 목과 등 근육을 강화하여 뒤집기와 배밀이로 이어지게 돕기
+
+[요청 사항]
+1. 아기가 거부감 없이 터미타임을 즐길 수 있도록 수유 쿠션이나 수건 롤을 가슴 밑에 받쳐주는 경사도 세팅법을 설명해줘.
+2. 부모와 눈을 맞추거나 호기심을 유발하는 거울 장난감, 꼬꼬맘 등 시각 유도물 배치 거리를 알려줘.
+3. 하루 권장 터미타임 총 시간(분)과 수유 직후에 절대 하면 안 되는 이유(역류 방지)를 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 바닥에서 울면 아빠 가슴 위에 아기를 엎어놓고 눈을 맞추는 "인간 침대 터미타임"부터 시작하면 아기가 훨씬 덜 무서워합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한소아청소년과학회 영아 돌연사 증후군 예방 및 터미타임 권고</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="play" id="p-34">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#34</span>
+            <span class="badge-cat cat-play">발달·놀이</span>
+            <span class="badge-age">👶 생후 8~14개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(34)" id="copy-btn-34" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">잡고 서기 & 첫 걸음마 유도하는 안전 거실 장애물 놀이</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-34">[걸음마 유도 조건]
+- 월령: 생후 11개월
+- 발달: 소파나 테이블을 잡고 게걸음으로 옆으로 이동(크루징)은 잘하는데, 손을 떼고 균형 잡는 것을 두려워함
+
+[요청 사항]
+1. 거실 소파와 쿠션을 활용하여 아기가 자연스럽게 두 손을 떼고 한 걸음 내딛도록 동기를 부여하는 장애물 코스 구성법을 알려줘.
+2. 아기가 뒤로 쿵 넘어졌을 때 뇌진탕 등 두부 외상을 방지하기 위한 놀이 매트 두께(4cm)와 모서리 보호대 안전 점검 리스트를 짚어줘.
+3. 부모가 아기 양손을 위로 잡아당겨 걷게 하는 방식이 어깨 탈구 위험이 있어 지양해야 하는 이유를 설명해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 아기 손을 위로 잡아당기며 걷게 하면 팔꿈치 탈구 위험이 있으므로, 가슴 높이의 안정적인 잡고 밀기 보행기구를 활용하세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 질병관리청 영유아 가정 내 낙상 및 두부 외상 예방 안전 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="play" id="p-35">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#35</span>
+            <span class="badge-cat cat-play">발달·놀이</span>
+            <span class="badge-age">👶 생후 9~15개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(35)" id="copy-btn-35" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">소근육 발달(집게 손가락 쥐기) 핑거푸드 & 스티커 놀이</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-35">[소근육 훈련 놀이]
+- 월령: 생후 10개월
+- 발달 목표: 손바닥 전체로 움켜쥐기(Palmar Grasp)에서 엄지와 검지 끝으로 집어 올리는 집게 쥐기(Pincer Grasp) 완성하기
+
+[요청 사항]
+1. 떡뻥이나 잘게 썬 삶은 당근, 블루베리 등을 활용해 식판 위에서 집게 손가락을 쓰게 유도하는 핑거푸드 놀이 요령을 알려줘.
+2. 손등이나 트레이에 종이 테이프나 큰 동그라미 스티커를 붙여 아기가 스스로 떼어내게 하는 스티커 놀이법을 소개해줘.
+3. 집게 쥐기 발달이 향후 숟가락질과 뇌 두뇌 발달에 어떤 연관이 있는지 간단히 설명해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 식판에 작은 쌀튀밥이나 삶은 완두콩을 2~3알씩 놓아주면 집중해서 엄지와 검지만 사용해 집어 올리는 최고의 소근육 훈련이 됩니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 몬테소리 영아 일상 감각 발달 지침 및 소아 발달 이정표</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="play" id="p-36">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#36</span>
+            <span class="badge-cat cat-play">발달·놀이</span>
+            <span class="badge-age">👶 생후 10~24개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(36)" id="copy-btn-36" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">대근육 발달(쿠션 넘기, 이불 터널) 육퇴 촉진 저녁 놀이</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-36">[저녁 에너지 소모 놀이]
+- 월령: 생후 13개월
+- 상황: 저녁 7시만 되면 아기가 거실을 뛰어다니며 에너지가 넘치고 밤잠에 안 들려고 함
+- 조건: 아빠가 퇴근 후 몸으로 놀아주되, 너무 과격해서 다치지 않고 깊은 밤잠을 유도할 수 있는 코스
+
+[요청 사항]
+1. 거실에 베개와 두꺼운 이불을 쌓아 언덕을 넘어가게 하는 '쿠션 등반 코스'와 '이불 터널 기어가기' 놀이법을 알려줘.
+2. 밤잠 입면 1시간 전에는 과흥분을 가라앉히기 위해 정적인 놀이로 전환하는 '쿨다운(Cool-down)' 타이밍을 제안해줘.
+3. 낮 동안 못 채운 대근육 활동량을 채워주어 야간 수면의 질을 높이는 원리를 요약해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 신나게 몸으로 기어 다니게 한 뒤, 밤잠 40분 전에는 불을 끄고 낮은 톤으로 그림책을 읽어주는 쿨다운이 필수입니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 한국아동발달학회 대근육 운동량과 영유아 수면 잠복기 상관관계</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="play" id="p-37">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#37</span>
+            <span class="badge-cat cat-play">발달·놀이</span>
+            <span class="badge-age">👶 생후 4~15개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(37)" id="copy-btn-37" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기 옹알이에 맞장구치는 상호작용 언어 자극 5가지 대화법</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-37">[언어 자극 대화법]
+- 월령: 생후 7개월
+- 아기 행동: "바바바", "마마마", "어부바" 같은 자음 옹알이를 부쩍 자주 함
+- 고민: 초보 아빠라 아기가 옹알이할 때 뭐라고 대답해 줘야 언어 발달에 좋은지 어색함
+
+[요청 사항]
+1. 아기의 소리를 그대로 따라 해준 뒤 의미 있는 단어로 확장해 주는 '탁구공 주고받기식(Serve &amp; Return)' 대화 예시 3가지를 보여줘.
+2. 아빠 특유의 중저음 톤과 과장된 억양(부모어/Parentese)이 영아 뇌의 청각 피질을 자극하는 효과를 설명해줘.
+3. 기저귀 갈 때, 옷 입힐 때 부모가 하는 일상 행동을 생중계하듯 말해주는 '스포츠 중계식 대화 꿀팁'을 정리해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 아기가 "바바바" 하면 똑같이 "바바바 그랬어? 아빠 보면서 밥 달라고 바바바 했구나!" 하고 단어로 확장해 들려주세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 하버드 아동발달센터(Center on the Developing Child) 상호작용(Serve and Return) 원리</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="play" id="p-38">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#38</span>
+            <span class="badge-cat cat-play">발달·놀이</span>
+            <span class="badge-age">👶 생후 2~18개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(38)" id="copy-btn-38" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">목욕 시간 활용 물놀이 감각 자극 & 수면의식 연결 놀이</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-38">[목욕 루틴 놀이]
+- 월령: 생후 6개월
+- 목표: 목욕 시간을 단순 위생이 아닌 감각 놀이와 밤잠 수면의식으로 완벽하게 연계하기
+
+[요청 사항]
+1. 아기 욕조 안에서 물장구치기, 스펀지 물 짜기, 컵으로 물 폭포 만들기 등 촉각 자극 3단계를 소개해줘.
+2. 아기 체온 조절을 위한 적정 욕조 물 온도(37~38도)와 감기 걸리지 않는 최적의 목욕 시간(10분 이내)을 알려줘.
+3. 따뜻한 물로 체온이 살짝 올라갔다가 서서히 내려가면서 졸음이 오는 수면 생체 원리를 활용해 목욕 직후 로션 마사지 루틴을 세팅해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 목욕 후 체온이 0.5도 떨어질 때 자연스럽게 멜라토닌이 분비되므로, 목욕 종료 후 30분 이내에 불을 끄고 눕히는 것이 황금 타이밍입니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 대한소아청소년과학회 영유아 수면위생 및 목욕 요법 지침</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="record" id="p-39">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#39</span>
+            <span class="badge-cat cat-record">성장·기록</span>
+            <span class="badge-age">👶 전 월령</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(39)" id="copy-btn-39" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">오글거림 뺀 아빠의 솔직 담백 3문장 인스타 사진 일기</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-39">[오늘의 순간 메모]
+- 생후 310일
+- 잡고 일어서서 3초 동안 손을 떼고 균형을 잡았다가 엉덩방아를 찧음
+- 아빠를 쳐다보고 방긋 웃더니 박수를 침
+
+[요청 사항]
+인스타그램 사진 아래나 성장 일기장에 기록할 따뜻하고 담백한 문장 3가지를 써줘.
+(조건: 너무 오글거리거나 인위적인 문학적 미사여구는 빼고, 일상에서 아빠가 아이를 바라보는 솔직한 다정함과 현실적인 감동을 담아줘.)</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 오늘 있었던 구체적인 행동 1가지만 담백하게 적고, 오글거리는 미사여구 대신 아빠의 솔직한 시선으로 다듬어달라고 하세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 육아정책연구소(KICCE) 부모 양육 효능감 및 긍정적 기록 연구</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="record" id="p-40">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#40</span>
+            <span class="badge-cat cat-record">성장·기록</span>
+            <span class="badge-age">👶 100일, 200일, 300일, 돌</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(40)" id="copy-btn-40" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">100일·돌 셀프 기념 촬영 콘셉트 & 짧은 축하문 다듬기</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-40">[기념일 정보]
+- 기념일: 생후 300일
+- 콘셉트: 집 거실 흰 벽 앞에서 기저귀만 차고 300일 풍선과 함께 앉아있는 자연스러운 홈스냅
+- 아기 상태: 이가 아랫니 2개, 윗니 2개 쫑긋 나옴
+
+[요청 사항]
+1. 자연광을 활용해 스마트폰으로 찍을 때 그림자 안 지게 찍는 초간단 구도 팁 2가지를 알려줘.
+2. 300일 동안 아프지 않고 자라준 아기에게 전하는 4줄짜리 짧고 뭉클한 축하 메시지를 작성해줘.
+3. 훗날 아기가 컸을 때 읽어볼 수 있도록 아빠의 다짐을 담은 타임캡슐 한 문장을 만들어줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 기념사진은 형광등을 끄고 창가 옆 45도 각도 자연광에서 아기 눈높이로 카메라 렌즈를 낮춰 찍어야 스튜디오 느낌이 납니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 가정 내 아동 성장 마일스톤 사진 아카이빙 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="record" id="p-41">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#41</span>
+            <span class="badge-cat cat-record">성장·기록</span>
+            <span class="badge-age">👶 생후 8~15개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(41)" id="copy-btn-41" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기 첫 단어("아빠", "맘마") 감동 기록 타임캡슐</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-41">[첫 순간 메모]
+- 날짜: 오늘 저녁 이유식 먹기 직전
+- 순간: 의자에 앉아 아빠를 정확히 손가락으로 가리키며 "아-빠!"라고 또렷하게 두 번 발음함
+- 부모 반응: 아빠가 너무 놀라 숟가락 떨어뜨릴 뻔하고 눈물 핑 돎
+
+[요청 사항]
+1. 이 기적 같은 순간의 날씨, 시간, 아기의 표정과 목소리 톤을 영원히 기억할 수 있는 1인칭 관찰 일기 형태로 5줄로 재구성해줘.
+2. 20년 뒤 성인이 된 아이에게 보여줄 타임캡슐 편지 첫머리 문장으로 다듬어줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 첫 단어를 말한 정확한 날짜, 시간, 당시 식탁 위의 메뉴까지 사소한 디테일을 함께 적어두면 10년 뒤 읽었을 때 눈물이 납니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 발달심리학 영아 첫 어휘 획득의 정서적 유대 가치</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="record" id="p-42">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#42</span>
+            <span class="badge-cat cat-record">성장·기록</span>
+            <span class="badge-age">👶 생후 6~18개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(42)" id="copy-btn-42" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">엉망진창 이유식 얼굴 사진 밑 유쾌한 현실 육아 캡션</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-42">[엽기/현실 사진 메모]
+- 상황: 단호박 소고기 진밥을 먹다가 숟가락을 뺏어서 자기 머리와 볼, 옷에 온통 노랗게 바름
+- 사진 모습: 온 얼굴에 밥풀을 묻힌 채 해맑게 씨익 웃고 있는 모습
+- 부모 감정: 치울 생각에 눈앞이 아찔하지만 너무 웃기고 귀여움
+
+[요청 사항]
+1. SNS(인스타그램/스레드)에 올렸을 때 다른 부모들의 격한 공감과 웃음을 자아내는 유쾌하고 센스 있는 캡션 3가지(해시태그 포함)를 써줘.
+2. "이것도 다 한때다"라는 육퇴 아빠의 유쾌한 체념과 사랑을 담아줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 예쁜 사진만 남기지 말고 밥풀 범벅, 오열하는 엽기 표정 사진에 재치 있는 캡션을 달아두면 훗날 최고의 가족 보물이 됩니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 소셜 미디어 부모 커뮤니케이션 및 양육 스트레스 해소 연구</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="record" id="p-43">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#43</span>
+            <span class="badge-cat cat-record">성장·기록</span>
+            <span class="badge-age">👶 생후 10~16개월</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(43)" id="copy-btn-43" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기 첫 걸음마 순간 부모의 뭉클한 다짐 일기</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-43">[첫 걸음마 메모]
+- 상황: 거실 매트 끝에서 아빠 품을 향해 아무것도 잡지 않고 아장아장 4걸음을 걷고 안김
+- 월령: 생후 340일 (돌 3주 전)
+
+[요청 사항]
+1. 세상에 홀로 첫발을 내디딘 아이의 용기와, 그 작은 발걸음을 평생 응원하겠다는 아빠의 묵직하고 다정한 다짐을 담은 일기글을 작성해줘.
+2. 육아 다이어리에 손글씨로 적기 좋은 3단락 호흡으로 정돈해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 첫 걸음마 순간에는 감탄사보다 "앞으로 네가 걷다가 넘어질 때마다 언제든 돌아와 안길 수 있는 든든한 품이 되어주겠다"는 다짐을 남겨보세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: KICCE 영유아 발달 과업 성취와 부모 애착 지침</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="record" id="p-44">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#44</span>
+            <span class="badge-cat cat-record">성장·기록</span>
+            <span class="badge-age">👶 매월 말 정기 기록</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(44)" id="copy-btn-44" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">한 달간의 아기 키·몸무게·새로운 스킬 성장 마일스톤 한눈 요약</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-44">[이번 달 성장 데이터]
+- 대상: 생후 9개월 -&gt; 10개월 진입
+- 신체: 키 73cm (+1.5cm), 몸무게 9.2kg (+400g)
+- 이번 달 처음 해낸 것들: 짝짜꿍 박수 치기, 빨대컵 양손으로 잡고 마시기, 잡고 서서 한 손 떼기, "맘마" 소리 내기
+
+[요청 사항]
+1. 위 데이터를 한눈에 볼 수 있는 깔끔한 '월간 아기 성장 리포트' 카드 텍스트 형태로 디자인해줘.
+2. 다음 달에 집중해서 관찰하고 격려해 줄 예상 발달 스킬 2가지를 덧붙여줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 매월 마지막 날 밤 같은 벽에 키를 재고 몸무게와 새 스킬을 리포트 카드로 남겨두면 영유아 검진 때도 한눈에 보여주기 편합니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 질병관리청 소아 표준 성장도표 백분위수 추적 권고</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="communication" id="p-45">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#45</span>
+            <span class="badge-cat cat-communication">부부·소통</span>
+            <span class="badge-age">👶 부모 대상 (전 월령)</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(45)" id="copy-btn-45" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">육퇴 후 부부 인수인계 30초 교대 근무 브리핑 템플릿</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-45">[오늘 낮 돌봄 기록 메모]
+- 마지막 수유/이유식: 18:30 (이유식 150g 완밥, 분유는 안 먹음)
+- 기저귀: 19:10 소변 1회 (대변은 오늘 오전 1회 봄)
+- 마지막 낮잠 종료: 16:00
+- 특이사항: 이앓이 때문인지 콧물이 살짝 나고 귀를 만지작거림, 체온 37.1도
+
+[요청 사항]
+퇴근하고 돌아온 배우자에게 30초 만에 군더더기 없이 인수인계할 수 있는 '부부 교대근무 브리핑' 텍스트를 작성해줘.
+(항목: 1. 마지막 밥/약, 2. 배변 상태, 3. 밤잠 예상 시간, 4. 오늘 밤 요주의 포인트)</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 감정 섞인 하소연 대신 간호사 인수인계처럼 수유-배변-수면 3대 팩트만 공유하면 부부간 불필요한 짜증과 오해를 100% 방지할 수 있습니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 육아정책연구소(KICCE) 맞벌이 부부 공동 양육 의사소통 표준 모델</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="communication" id="p-46">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#46</span>
+            <span class="badge-cat cat-communication">부부·소통</span>
+            <span class="badge-age">👶 조부모 돌봄 지원 가정</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(46)" id="copy-btn-46" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">조부모님(시부모님·친정)께 요즘 육아 방식 부드럽게 부탁드리는 카톡 문구</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-46">[부탁드릴 내용]
+- 대상: 평일 낮에 아기를 봐주시는 시어머니 (또는 친정엄마)
+- 요청 1: 아기가 울 때마다 바로 안아서 흔들지 마시고 3분만 토닥이며 기다려주세요 (수면 습관).
+- 요청 2: 간이 된 어른 음식이나 과자(초콜릿, 사탕)를 아직 맛보게 하지 말아주세요.
+
+[요청 사항]
+어르신의 정성과 수고에 깊이 감사하면서도, 마음 상하지 않게 "요즘 소아과 의사 선생님이 꼭 지키라고 당부했다"는 전문가 권위를 빌려 정중하고 다정하게 부탁하는 카톡 문장 2가지를 써줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> "어머니 방식은 틀렸어요" 대신 "소아과 원장님이 요즘 아기들은 알레르기 기준이 바뀌었다고 신신당부하더라고요"라고 전달하세요.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: KICCE 조부모 양육 참여 가정의 세대 간 갈등 완화 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="communication" id="p-47">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#47</span>
+            <span class="badge-cat cat-communication">부부·소통</span>
+            <span class="badge-age">👶 육아 부부</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(47)" id="copy-btn-47" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기 돌봄으로 지친 배우자에게 건네는 따뜻한 마음 챙김 편지</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-47">[상황 정보]
+- 받는 사람: 하루 종일 집에서 아기와 씨름하느라 밥도 제때 못 먹고 녹초가 된 아내(또는 남편)
+- 상황: 아기를 재우고 거실에 멍하니 앉아 지쳐있는 모습
+- 전하고 싶은 마음: "당신이 얼마나 위대한 일을 해내고 있는지 안다, 내가 더 챙겨주지 못해 미안하고 언제나 내 1순위는 당신이다"
+
+[요청 사항]
+식탁 위에 좋아하는 야식/간식과 함께 살포시 올려둘 수 있는, 진심 어린 5줄짜리 손편지 문구를 작성해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> "아기 보느라 고생했어"보다 "오늘 당신 밥은 제대로 챙겨 먹었어? 내 눈엔 아기보다 당신이 먼저야"라는 말이 백배 위로가 됩니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 보건복지부 산후 우울 예방 및 부부 정서적 지지 프로그램</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="communication" id="p-48">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#48</span>
+            <span class="badge-cat cat-communication">부부·소통</span>
+            <span class="badge-age">👶 주말 육아 부부</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(48)" id="copy-btn-48" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">주말 부부 육아 평화로운 공평 분담표 (개인 자유시간 3시간씩 보장)</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-48">[주말 분담 조건]
+- 대상: 토요일, 일요일 주말
+- 목표: 부부가 각자 주말 중 온전한 개인 자유시간(혼자 카페 가기, 푹 자기 등) 최소 3시간씩 공평하게 확보하기
+- 필수 과업: 아기 3끼 식사 챙기기, 기저귀/목욕, 젖병 소독/설거지, 거실 청소
+
+[요청 사항]
+1. 토요일과 일요일 오전/오후로 역할을 나누어 한 사람이 아기를 전담할 때 다른 사람은 방해받지 않고 쉴 수 있는 '주말 평화 타임테이블'을 짜줘.
+2. 서로 "내가 더 힘들었다"며 생색내지 않기 위한 부부 주말 협약 룰 3가지를 정해줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 주말에는 어설프게 둘이 같이 붙어있기보다 "토욜 오전은 아빠 자유, 일욜 오전은 엄마 자유"로 통으로 3시간씩 떼어주는 게 효율적입니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 여성가족부 맞돌봄 부부 육아 분담 실태 및 만족도 조사</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="communication" id="p-49">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#49</span>
+            <span class="badge-cat cat-communication">부부·소통</span>
+            <span class="badge-age">👶 멘붕 온 부모</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(49)" id="copy-btn-49" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">아기가 온종일 울어서 멘붕 온 날, 부모 자책 방지 자기 위로 프롬프트</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-49">[부모의 지친 심리 상태]
+- 상황: 오늘 아기가 이유 없이 하루 종일 칭얼대고 울어서 나도 모르게 아기에게 한숨을 푹 쉬고 짜증을 냄
+- 감정: "내가 부모 자격이 없나? 왜 나만 이렇게 힘들지?"라는 극심한 죄책감과 무력감에 휩싸임
+
+[요청 사항]
+1. 육아 스트레스 상황에서 부모가 느끼는 감정이 지극히 정상적인 생체 반응임을 심리학적으로 설명해줘.
+2. 죄책감의 늪에서 빠져나와 오늘 밤 마음을 다독일 수 있는 따뜻한 3단계 셀프 토닥임(호흡, 인정, 분리) 문장을 건네줘.
+3. "완벽한 부모가 아니라 충분히 좋은 부모(Good Enough Parent)"라는 도널드 위니콧의 철학을 빌려 위로를 건네줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 부모도 사람입니다. 지쳤을 때는 아기를 안전한 침대에 눕혀두고 문을 닫고 나와 찬물 한 잔 마시며 3번 심호흡하는 것이 먼저입니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 소아정신건강의학과 부모 소진(Burnout) 증후군 완화 가이드</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="prompt-card" data-category="communication" id="p-50">
+        <div class="card-header">
+          <div class="card-meta">
+            <span class="badge-num">#50</span>
+            <span class="badge-cat cat-communication">부부·소통</span>
+            <span class="badge-age">👶 퇴근하는 초보 아빠</span>
+          </div>
+          <button class="btn-copy" onclick="copyPrompt(50)" id="copy-btn-50" title="프롬프트 복사하기">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">복사하기</span>
+          </button>
+        </div>
+
+        <h3 class="card-title">초보 아빠가 퇴근길에 오늘 육아에 바로 투입되기 위한 1분 워밍업 체크</h3>
+
+        <div class="prompt-box">
+          <div class="prompt-box-top">
+            <span class="prompt-label">🤖 Gemini / AI 입력용 프롬프트</span>
+            <span class="prompt-sub">원하는 숫자·월령만 바꿔 쓰세요</span>
+          </div>
+          <pre class="prompt-code" id="prompt-text-50">[퇴근길 상태]
+- 퇴근길 전철 안: 회사 업무와 상사 스트레스로 머리가 지끈거림
+- 목표: 현관문을 열고 들어서는 순간 직장인 모드를 끄고, 지친 배우자를 구원하는 '육아 전우 아빠 모드'로 스위치 켜기
+
+[요청 사항]
+1. 현관문 앞에서 심호흡하며 머릿속을 비우는 1분 마인드 리셋 행동 요령 3단계를 알려줘.
+2. 집에 들어가자마자 가방 던져놓고 1초 만에 외쳐야 할 배우자를 향한 첫 마디 추천 문장 2가지를 줘.
+3. 옷 갈아입고 손 씻은 뒤 바로 투입될 수 있는 '가장 티 나고 배우자가 고마워하는 1순위 집안일'(젖병 설거지, 쓰레기 분리수거 등)을 짚어줘.</pre>
+        </div>
+
+        <div class="card-footer">
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <div class="tip-content">
+              <strong>짜로파파 한 줄 꿀팁:</strong> 현관문 열고 "나 오늘 회사에서 진짜 힘들었어" 대신 "여보 고생 많았지! 내가 왔으니 이제 손 씻고 바로 교대할게"가 최고의 명대사입니다.
+            </div>
+          </div>
+          <div class="evidence-box">
+            <span class="evidence-icon">📎</span>
+            <span class="evidence-text">근거: 고용노동부 및 KICCE 일·가정 양립을 위한 아빠의 퇴근 후 역할 전환 연구</span>
+          </div>
+        </div>
+      </article>
+    
+
+      <div class="no-results" id="no-results">
+        <div class="no-results-icon">🧐</div>
+        <p><strong>검색 결과가 없습니다.</strong><br />다른 키워드나 카테고리를 선택해 보세요.</p>
+      </div>
+    </main>
+
+    <!-- 4. 하단 안내 및 채널 바로가기 -->
+    <footer class="resource-footer">
+      <img src="../../assets/images/profile_01_baby.png" alt="짜로파파 캐릭터" class="footer-avatar" />
+      <div class="footer-title">짜로파파의 AI 연구소</div>
+      <p class="footer-desc">
+        이 자료는 블로그·인스타·스레드 독자분들을 위해 무료로 제공됩니다.<br />
+        주변에 육아로 지친 초보 부모님들께 자유롭게 공유해 주세요!
+      </p>
+
+      <div class="footer-links-grid">
+        <a href="https://blog.naver.com/economytalktalk" target="_blank" rel="noopener noreferrer" class="footer-channel-btn">
+          <span>📗</span> 네이버 블로그
+        </a>
+        <a href="https://ai-diary-collection.tistory.com" target="_blank" rel="noopener noreferrer" class="footer-channel-btn">
+          <span>📙</span> 티스토리
+        </a>
+        <a href="https://www.instagram.com/zzaro.papa" target="_blank" rel="noopener noreferrer" class="footer-channel-btn">
+          <span>📸</span> 인스타그램
+        </a>
+        <a href="https://www.threads.com/@zzaro.papa" target="_blank" rel="noopener noreferrer" class="footer-channel-btn">
+          <span>🧵</span> 스레드
+        </a>
+      </div>
+
+      <a href="../../index.html" class="btn-back-home">
+        <span>🏠</span>
+        <span>짜로파파 연구소 홈으로 가기</span>
+      </a>
+    </footer>
+
+  </div>
+
+  <!-- 토스트 알림 레이어 -->
+  <div id="toast" class="toast-popup">
+    <span>📋</span>
+    <span id="toast-msg">프롬프트가 클립보드에 복사되었습니다!</span>
+  </div>
+
+  <script>
+    let currentCategory = 'all';
+    let searchQuery = '';
+
+    // 카테고리 필터링
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-cat') === cat);
+      });
+      applyFilters();
+    }
+
+    // 검색어 입력 핸들러
+    function handleSearch() {
+      searchQuery = document.getElementById('search-input').value.trim().toLowerCase();
+      applyFilters();
+    }
+
+    // 통합 필터 적용
+    function applyFilters() {
+      const cards = document.querySelectorAll('.prompt-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        const textContent = card.innerText.toLowerCase();
+
+        const matchCat = (currentCategory === 'all' || cardCat === currentCategory);
+        const matchSearch = (!searchQuery || textContent.includes(searchQuery));
+
+        if (matchCat && matchSearch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const noResults = document.getElementById('no-results');
+      if (visibleCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    }
+
+    // 1클릭 복사 기능
+    function copyPrompt(id) {
+      const textElem = document.getElementById('prompt-text-' + id);
+      if (!textElem) return;
+
+      const text = textElem.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('프롬프트가 복사되었습니다! Gemini나 ChatGPT에 붙여넣으세요 🎉');
+        
+        const btn = document.getElementById('copy-btn-' + id);
+        if (btn) {
+          btn.classList.add('copied');
+          btn.innerHTML = '<span class="btn-icon">✅</span><span class="btn-text">복사완료!</span>';
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerHTML = '<span class="btn-icon">📋</span><span class="btn-text">복사하기</span>';
+          }, 1800);
+        }
+      }).catch(err => {
+        console.error('클립보드 복사 실패:', err);
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast('프롬프트가 복사되었습니다! 🎉');
+      });
+    }
+
+    // 토스트 팝업 표시
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      toastMsg.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2200);
+    }
+  </script>
+</body>
+</html>
